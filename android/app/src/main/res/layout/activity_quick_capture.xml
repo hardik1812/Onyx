@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <!-- Dimmed background that is clickable to dismiss -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:onClick="dismissAction"/>
+
+    <!-- Full Capture Box mimicking the App's UI -->
+    <LinearLayout
+        android:id="@+id/capture_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/pixel_widget_background"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:elevation="16dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Top Section (Tags would go here) -->
+        <TextView
+            android:id="@+id/folder_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General"
+            android:textColor="#A8C7FA"
+            android:textSize="12sp"
+            android:background="@drawable/tag_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:background="@null"
+            android:hint="What's on your mind?"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#40FFFFFF"
+            android:textSize="22sp"
+            android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+            android:gravity="top"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"/>
+
+        <!-- Functions palette (hidden by default, shown when /functions is typed) -->
+        <LinearLayout
+            android:id="@+id/functions_palette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="8dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/color_scroll_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"/>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingHorizontal="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <ImageView
+                    android:id="@+id/btn_gallery"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:alpha="0.5"
+                    android:tint="#FFFFFF"
+                    android:layout_marginEnd="16dp"/>
+
+                <ImageView
+                    android:id="@+id/btn_timer"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    android:alpha="0.5"
+                    android:tint="#FFFFFF"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/save_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/widget_save_button_circle"
+                android:src="@android:drawable/ic_menu_add"
+                android:tint="#121318"
+                android:padding="12dp"
+                android:elevation="4dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
