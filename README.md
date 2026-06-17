@@ -11,16 +11,6 @@ Onyx is architected as a hybrid mobile/desktop application:
 - **Backend Core (Rust):** Embedded SQLite database handling persistence, dynamic text category classifiers, and codebase spec auditing.
 - **Bridge (Flutter Rust Bridge v2):** Lightweight, zero-copy, compile-time binding generator bridging Dart stream listeners and synchronous/asynchronous Rust handlers.
 
-```mermaid
-graph TD
-    UI[Flutter UI Client] -- Method Calls / Streams --> FRB[Flutter Rust Bridge v2]
-    FRB --> Rust[Rust Backend Lib]
-    Rust --> DB[(Rusqlite Database)]
-    Rust --> Classifier[Intent Classifier Engine]
-    Rust --> Critic[Architectural Audit Critic]
-    UI -. Launch Intent .-> OS[Android System Alarms]
-```
-
 ---
 
 ## ✨ Key Features
