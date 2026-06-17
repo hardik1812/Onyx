@@ -1,4 +1,4 @@
-# 💡 FastReminder (Thoughts)
+# 💡 Onyx
 
 A high-fidelity, hybrid **Flutter + Rust** reminders, task management, and project canvas application. Features dynamic Rust-based intent classification, a local SQLite-backed architecture, slash-command expansions, and a satisfying, haptically-rich dark UI styled with pastel Material You colors.
 
@@ -6,7 +6,7 @@ A high-fidelity, hybrid **Flutter + Rust** reminders, task management, and proje
 
 ## 🏗️ Architecture & Technology Stack
 
-FastReminder is architected as a hybrid mobile/desktop application:
+Onyx is architected as a hybrid mobile/desktop application:
 - **Frontend (Flutter & Dart):** High-framerate responsive UI with smooth micro-animations, page transitions, custom paint grids, gesture-based folder navigation, and system-wide haptic feedback overlay.
 - **Backend Core (Rust):** Embedded SQLite database handling persistence, dynamic text category classifiers, and codebase spec auditing.
 - **Bridge (Flutter Rust Bridge v2):** Lightweight, zero-copy, compile-time binding generator bridging Dart stream listeners and synchronous/asynchronous Rust handlers.
@@ -57,7 +57,7 @@ Type slash commands in the text box for specialized rich widgets:
 | `/a` | **Alarm** - Sets a countdown timer and hooks into system Alarms | `/a Meetup in 10m` |
 | `/n` | **Note** - Creates a long-form pastel-themed text editor | `/n Design Doc` |
 | `/p` | **Project** - Creates/routes an item inside a project canvas | `/p AppName :backend Create API` |
-| `/c` | **Counter** - Creates an interactive, tactile counter card | `/c Push-ups` |
+| `/c` | **Counter** - Creates interactive, tactile counter cards | `/c Push-ups` |
 
 ---
 
